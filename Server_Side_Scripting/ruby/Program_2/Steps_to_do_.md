@@ -1,30 +1,44 @@
-command in terminal
-====================
+## Book Application
 
-rails new book
+This is a Rails application for managing book details using a scaffold for BookDetail.
 
----------------
+### Getting Started
 
-cd book
+1. Create a new Rails application named `book`:
 
----------
+    ```bash
+    rails new book
+    ```
 
-rails generate scaffold BookDetail Book_Name:string Author:string Price:decimal Mail_ID:string
+2. Navigate to the newly created directory:
 
--------------
+    ```bash
+    cd book
+    ```
 
-rake db:create
+3. Generate the scaffold for BookDetail:
 
----------------
-rake db:migrate
+    ```bash
+    rails generate scaffold BookDetail Book_Name:string Author:string Price:decimal Mail_ID:string
+    ```
 
----------------------------------------------------------------------
+4. Create the database:
 
-Modify code 
-===========
+    ```bash
+    rake db:create
+    ```
 
-in #app>views>book_details>_book_details.html.erb
+5. Migrate the database:
 
+    ```bash
+    rake db:migrate
+    ```
+
+### Code Modifications
+
+#### `app/views/book_details/_book_detail.html.erb`
+
+```erb
 <div id="<%= dom_id book_detail %>">
   <p>
     <strong>Book name:</strong>
@@ -45,12 +59,12 @@ in #app>views>book_details>_book_details.html.erb
     <strong>Mail id:</strong>
     <%= book_detail.Mail_ID %>
   </p>
-
 </div>
+```
 
---------------------------------------------------------------
-in #app>views>book_details>edit.html.erb
+#### `app/views/book_details/edit.html.erb`
 
+```erb
 <h1>Editing book detail</h1>
 
 <%= render "form", book_detail: @book_detail %>
@@ -61,10 +75,11 @@ in #app>views>book_details>edit.html.erb
   <%= link_to "Show", @book_detail %> |
   <%= link_to "Back", book_details_path %>
 </div>
+```
 
---------------------------------------------------------------
-in #app>views>book_details>index.html.erb
+#### `app/views/book_details/index.html.erb`
 
+```erb
 <p style="color: green"><%= notice %></p>
 
 <h1>Book details</h1>
@@ -79,9 +94,11 @@ in #app>views>book_details>index.html.erb
 </div>
 
 <%= link_to "New", new_book_detail_path %>
+```
 
-in #app>views>book_details>new.html.erb
+#### `app/views/book_details/new.html.erb`
 
+```erb
 <h1>New book detail</h1>
 
 <%= render "form", book_detail: @book_detail %>
@@ -91,10 +108,11 @@ in #app>views>book_details>new.html.erb
 <div>
   <%= link_to "Back", book_details_path %>
 </div>
+```
 
----------------------------------------------------------------
-in #app>views>book_details>show.html.erb
+#### `app/views/book_details/show.html.erb`
 
+```erb
 <p style="color: green"><%= notice %></p>
 
 <%= render @book_detail %>
@@ -105,26 +123,25 @@ in #app>views>book_details>show.html.erb
 
   <%= button_to "Delete", @book_detail, method: :delete %>
 </div>
+```
 
--------------------------------------------------------------------
-in #config>routes.rb
+#### `config/routes.rb`
 
+```ruby
 Rails.application.routes.draw do
   resources :book_details
-get "up" => "rails/health#show", as: :rails_health_check
+  get "up" => "rails/health#show", as: :rails_health_check
 
-   root "book_details#index"
+  root "book_details#index"
 end
+```
 
---------------------------------------------------------------------
+### Running the Application
 
-command in terminal
-===================
+1. Start the Rails server:
 
-rails server
+    ```bash
+    rails server
+    ```
 
-----------------------
-
-browse page in 127.0.0.1:3000
-
------------------------------------------------------------------------
+2. Browse the page at [http://127.0.0.1:3000](http://127.0.0.1:3000).
