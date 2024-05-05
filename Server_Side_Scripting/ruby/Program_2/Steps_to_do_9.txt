@@ -1,0 +1,130 @@
+command in terminal
+====================
+
+rails new book
+
+---------------
+
+cd book
+
+---------
+
+rails generate scaffold BookDetail Book_Name:string Author:string Price:decimal Mail_ID:string
+
+-------------
+
+rake db:create
+
+---------------
+rake db:migrate
+
+---------------------------------------------------------------------
+
+Modify code 
+===========
+
+in #app>views>book_details>_book_details.html.erb
+
+<div id="<%= dom_id book_detail %>">
+  <p>
+    <strong>Book name:</strong>
+    <%= book_detail.Book_Name %>
+  </p>
+
+  <p>
+    <strong>Author:</strong>
+    <%= book_detail.Author %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= book_detail.Price %>
+  </p>
+
+  <p>
+    <strong>Mail id:</strong>
+    <%= book_detail.Mail_ID %>
+  </p>
+
+</div>
+
+--------------------------------------------------------------
+in #app>views>book_details>edit.html.erb
+
+<h1>Editing book detail</h1>
+
+<%= render "form", book_detail: @book_detail %>
+
+<br>
+
+<div>
+  <%= link_to "Show", @book_detail %> |
+  <%= link_to "Back", book_details_path %>
+</div>
+
+--------------------------------------------------------------
+in #app>views>book_details>index.html.erb
+
+<p style="color: green"><%= notice %></p>
+
+<h1>Book details</h1>
+
+<div id="book_details">
+  <% @book_details.each do |book_detail| %>
+    <%= render book_detail %>
+    <p>
+      <%= link_to "Show", book_detail %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New", new_book_detail_path %>
+
+in #app>views>book_details>new.html.erb
+
+<h1>New book detail</h1>
+
+<%= render "form", book_detail: @book_detail %>
+
+<br>
+
+<div>
+  <%= link_to "Back", book_details_path %>
+</div>
+
+---------------------------------------------------------------
+in #app>views>book_details>show.html.erb
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @book_detail %>
+
+<div>
+  <%= link_to "Edit", edit_book_detail_path(@book_detail) %> |
+  <%= link_to "Back", book_details_path %>
+
+  <%= button_to "Delete", @book_detail, method: :delete %>
+</div>
+
+-------------------------------------------------------------------
+in #config>routes.rb
+
+Rails.application.routes.draw do
+  resources :book_details
+get "up" => "rails/health#show", as: :rails_health_check
+
+   root "book_details#index"
+end
+
+--------------------------------------------------------------------
+
+command in terminal
+===================
+
+rails server
+
+----------------------
+
+browse page in 127.0.0.1:3000
+
+-----------------------------------------------------------------------
