@@ -1,6 +1,6 @@
 ## Welcome App
 
-Create necessary folders and files:
+### Create necessary folders and files:
 
     - Create a new folder `welcome_username` inside `app/controllers`.
     - Inside `welcome_username`, create a file named `welcome_controller.rb`.
