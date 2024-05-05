@@ -1,0 +1,9 @@
+Run both command in differnt terminal at same time
+
+server.py in terminal_1
+
+    python -u "c:\Users\gokul\Desktop\ODD_LAB\SS_Exp_1_to_9\Program_7\server.py"
+
+client.py in terminal_2
+
+    python -u "c:\Users\gokul\Desktop\ODD_LAB\SS_Exp_1_to_9\Program_7\client.py"
