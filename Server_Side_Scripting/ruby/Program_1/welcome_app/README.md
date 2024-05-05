@@ -61,3 +61,4 @@ Rails.application.routes.draw do
   get '/welcome/greet', to: 'welcome#greet', as: 'welcome_greet'
 end
 ```
+**Note** - Some of the hidden file would be missing in this repository make sure to create it from start, sample code strcture is out here. 
