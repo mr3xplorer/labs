@@ -1,4 +1,4 @@
-# Cybersecurity Exploration Guide
+# Linux Security Lab Guide
 
 This guide provides a series of cybersecurity explorations, including practical exercises and case studies.
 
@@ -117,7 +117,6 @@ fi
    dd if=/dev/sda1 of=disk_image.img
    ls
    ```
-
 ## EXP8: Postmortem Linux
 
 1. Conduct a postmortem analysis of a Linux system using Burp Suite on a vulnerable web page.
