@@ -1,0 +1,6 @@
+<h1>Welcome to the Welcome App!</h1>
+<%= form_tag welcome_greet_path, method: :get do %>
+  <%= label_tag :username, "Enter your name:" %>
+  <%= text_field_tag :username %>
+  <%= submit_tag "GO" %>
+<% end %>
