@@ -10,6 +10,6 @@
 
 ## Getting Started
 
-To start with the labs, navigate to the desired topic folder and open the corresponding markdown file.
+To start with the labs, navigate to the desired topic folder and open the corresponding markdown file or folder.
 
 Happy learning!
