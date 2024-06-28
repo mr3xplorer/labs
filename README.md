@@ -5,7 +5,7 @@
 - [**Advanced_3thical_H@cking**](aeh_lab.md) Labs on advanced ethical hacking techniques.
 - [**Advanced_network_security**](ans_lab.md) Labs on advanced network security concepts.
 - [**Linux_Security_Forensics**](lab_list.md) Labs related to Linux security and forensics.
-- [**Server_Side_Scripting**] Files on server-side scripting labs.
+- [**Server_Side_Scripting**](Server_Side_Scripting) Files on server-side scripting labs.
 - [**Python Programming**](python_lab.md) Labs for enhancing Python programming skills.
 
 ## Getting Started
