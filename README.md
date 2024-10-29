@@ -2,11 +2,11 @@
 
 **Academic Labs** contains a collection of labs and exercises for various academic subjects I have learned. Each folder is dedicated to a specific topic.
 
-- [**Advanced_Ethical_Hacking**](aeh_lab.md) Labs on advanced ethical hacking techniques.
-- [**Advanced_Network_Security**](ans_lab.md) Labs on advanced network security concepts.
-- [**Linux_Security_Forensics**](lab_list.md) Labs related to Linux security and forensics.
+- [**Advanced_Ethical_Hacking**](Advanced_3thical_H@cking/aeh_lab.md) Labs on advanced ethical hacking techniques.
+- [**Advanced_Network_Security**](Advanced_network_security/ans_lab.md) Labs on advanced network security concepts.
+- [**Linux_Security_Forensics**](Linux_Security_Forensics/lab_list.md) Labs related to Linux security and forensics.
 - [**Server_Side_Scripting**](Server_Side_Scripting) Files on server-side scripting labs.
-- [**Python_Programming**](python_lab.md) Labs for enhancing Python programming skills.
+- [**Python_Programming**](python_programming/python_lab.md) Labs for enhancing Python programming skills.
 - [**Malware_Analysis**](malware_analysis_lab.md) Labs on malware analysis techniques.
 
 ## Getting Started
